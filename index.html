@@ -9,7 +9,7 @@
   <body>
     <div class="screen">
       <div class="calculator">
-        skjdfgkjsdgfskjdfgkjsda
+      
         <input type="text" id="display" readonly />
 
         <div class="button-container">
@@ -19,13 +19,33 @@
           document.querySelector('#display').value = currentDisplay;"
           >
             C
+          </button >
+          <button class="Button"
+           onclick="currentDisplay= currentDisplay + '(';
+           document.querySelector('#display').value = currentDisplay;
+          ">
+              (
+          </button>
+          <button class="Button"
+           onclick="currentDisplay= currentDisplay + ')';
+           document.querySelector('#display').value = currentDisplay;
+          ">
+              )
+          </button>
+
+          <button
+            class="Button symbol"
+            onclick="currentDisplay=currentDisplay + '/';
+                document.querySelector('#display').value = currentDisplay;
+          "
+          >
+            /
           </button>
 
           <button
             class="Button"
             onclick="currentDisplay=currentDisplay + '1';
-                document.querySelector('#display').value = currentDisplay;
-          "
+           document.querySelector('#display').value = currentDisplay;"
           >
             1
           </button>
@@ -33,17 +53,9 @@
           <button
             class="Button"
             onclick="currentDisplay=currentDisplay + '2';
-           document.querySelector('#display').value = currentDisplay;"
-          >
-            2
-          </button>
-
-          <button
-            class="Button"
-            onclick="currentDisplay=currentDisplay + '+';
           document.querySelector('#display').value = currentDisplay;"
           >
-            +
+            2
           </button>
 
           <button
@@ -55,19 +67,19 @@
           </button>
 
           <button
-            class="Button"
+            class="Button symbol"
+            onclick="currentDisplay=currentDisplay + '*';
+          document.querySelector('#display').value = currentDisplay;"
+          >
+            X
+          </button>
+
+          <button
+            class="Button "
             onclick="currentDisplay=currentDisplay + '4';
           document.querySelector('#display').value = currentDisplay;"
           >
             4
-          </button>
-
-          <button
-            class="Button"
-            onclick="currentDisplay=currentDisplay + '-';
-          document.querySelector('#display').value = currentDisplay;"
-          >
-            -
           </button>
 
           <button
@@ -87,11 +99,11 @@
           </button>
 
           <button
-            class="Button"
-            onclick="currentDisplay=currentDisplay + '*';
+            class="Button symbol"
+            onclick="currentDisplay=currentDisplay + '-';
           document.querySelector('#display').value = currentDisplay;"
           >
-            *
+            -
           </button>
 
           <button
@@ -112,26 +124,23 @@
 
           <button
             class="Button"
-            onclick="currentDisplay=currentDisplay + '/';
-          document.querySelector('#display').value = currentDisplay;"
-          >
-            /
-          </button>
-
-          <button
-            class="Button"
-            onclick="let result = eval(currentDisplay);
-          document.querySelector('#display').value = currentDisplay +' = ' + result;"
-          >
-            =
-          </button>
-
-          <button
-            class="Button"
             onclick="currentDisplay=currentDisplay + '9';
           document.querySelector('#display').value = currentDisplay;"
           >
             9
+          </button>
+
+          <button
+            class="Button symbol"
+            onclick="currentDisplay=currentDisplay + '.';
+          document.querySelector('#display').value = currentDisplay ;"
+          >
+            .
+          </button>
+          <button class="equal-button" 
+          onclick="currentDisplay= `${currentDisplay}`+ ' = ' + eval(currentDisplay);
+          document.querySelector('#display').value = currentDisplay;">=
+
           </button>
 
           <button
@@ -141,14 +150,15 @@
           >
             0
           </button>
-
           <button
-            class="Button"
-            onclick="currentDisplay=currentDisplay + '.';
-          document.querySelector('#display').value = currentDisplay;"
-          >
-            .
-          </button>
+          class="Button symbol"
+          onclick="currentDisplay=currentDisplay + '+';
+        document.querySelector('#display').value = currentDisplay;"
+        >
+          +
+        </button>
+
+          
         </div>
       </div>
     </div>
