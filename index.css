@@ -1,0 +1,36 @@
+.screen{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    background-color: rgb(153, 61, 61);
+    
+   
+}
+.calculator{
+    width:220px;
+    border: 2px solid black;
+   
+}
+#display{
+  margin:10px;
+  width:85%;
+  height:2.5em;
+  font-size:large;
+  border-radius: 10px;
+ 
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.Button{
+    height: 50px;
+    width:50px;
+    margin: 3px;
+    background-color: rgb(228, 237, 238);
+    font-size: 1.5em;
+    border-radius: 30%;
+}
