@@ -9,7 +9,6 @@
   <body>
     <div class="screen">
       <div class="calculator">
-      
         <input type="text" id="display" readonly />
 
         <div class="button-container">
@@ -19,18 +18,22 @@
           document.querySelector('#display').value = currentDisplay;"
           >
             C
-          </button >
-          <button class="Button"
-           onclick="currentDisplay= currentDisplay + '(';
-           document.querySelector('#display').value = currentDisplay;
-          ">
-              (
           </button>
-          <button class="Button"
-           onclick="currentDisplay= currentDisplay + ')';
+          <button
+            class="Button"
+            onclick="currentDisplay= currentDisplay + '(';
            document.querySelector('#display').value = currentDisplay;
-          ">
-              )
+          "
+          >
+            (
+          </button>
+          <button
+            class="Button"
+            onclick="currentDisplay= currentDisplay + ')';
+           document.querySelector('#display').value = currentDisplay;
+          "
+          >
+            )
           </button>
 
           <button
@@ -75,7 +78,7 @@
           </button>
 
           <button
-            class="Button "
+            class="Button"
             onclick="currentDisplay=currentDisplay + '4';
           document.querySelector('#display').value = currentDisplay;"
           >
@@ -137,10 +140,12 @@
           >
             .
           </button>
-          <button class="equal-button" 
-          onclick="currentDisplay= `${currentDisplay}`+ ' = ' + eval(currentDisplay);
-          document.querySelector('#display').value = currentDisplay;">=
-
+          <button
+            class="equal-button"
+            onclick="currentDisplay= `${currentDisplay}`+ ' = ' + eval(currentDisplay);
+          document.querySelector('#display').value = currentDisplay;"
+          >
+            =
           </button>
 
           <button
@@ -151,14 +156,12 @@
             0
           </button>
           <button
-          class="Button symbol"
-          onclick="currentDisplay=currentDisplay + '+';
+            class="Button symbol"
+            onclick="currentDisplay=currentDisplay + '+';
         document.querySelector('#display').value = currentDisplay;"
-        >
-          +
-        </button>
-
-          
+          >
+            +
+          </button>
         </div>
       </div>
     </div>
